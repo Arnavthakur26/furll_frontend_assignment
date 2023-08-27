@@ -1,0 +1,1 @@
+export type ProductProp={productId:string,imageUrl:string,title:string,furrlDiscountPercent:number,furrlCheckoutPrice:number,furrlPrice:number}
