@@ -29,11 +29,11 @@ interface ProductsResponse {
 }
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<ProductProp[]>([]);
   const [page, setPage] = useState(1);
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getProducts(page);
+      const data: any = await getProducts(page);
       setProducts((prev) => [...prev, ...data.collectionData[0].product_ids]);
     };
     fetchData();
